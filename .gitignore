@@ -1,0 +1,59 @@
+# ---------------------------------------------------------------
+# Salidas de compilacion de S32DS (se regeneran con Build)
+# ---------------------------------------------------------------
+Debug_FLASH/
+Debug_RAM/
+Release_FLASH/
+Release_RAM/
+*.o
+*.d
+*.args
+*.elf
+*.map
+*.siz
+*.srec
+*.hex
+*.bin
+
+# ---------------------------------------------------------------
+# Archivos que dependen de la PC / instalacion local
+# ---------------------------------------------------------------
+# Configuraciones de lanzamiento y depuracion (puerto del debugger,
+# rutas de la sonda PEmicro, etc.)
+*.launch
+# Rutas de includes y del compilador detectadas en esta PC
+.settings/language.settings.xml
+# Estado del workspace de Eclipse (por si se crea dentro del proyecto)
+.metadata/
+RemoteSystemsTempFiles/
+.s32ds_packages_support/
+
+# Respaldos de Config Tools
+*.bak
+
+# ---------------------------------------------------------------
+# Sistema operativo y editores
+# ---------------------------------------------------------------
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+*.swp
+*~
+
+# ---------------------------------------------------------------
+# Archivos ajenos al proyecto S32DS (herramientas de VS Code,
+# Claude Code y documentacion)
+# ---------------------------------------------------------------
+scripts/
+docs/
+CLAUDE.md
+.claude/
+
+# ---------------------------------------------------------------
+# Practica 5: codigo listo para copiar al proyecto (se borra al
+# terminar de integrarlo), enunciado y temporales de Office
+# ---------------------------------------------------------------
+codigo_practica/
+Requisitos.docx
+~$*
