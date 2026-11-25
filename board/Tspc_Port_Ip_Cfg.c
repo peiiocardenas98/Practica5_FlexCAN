@@ -105,7 +105,17 @@ extern "C"{
 PortContainer_0_BOARD_InitPeripherals:
 - options: {callFromInitBoot: 'true', coreID: M7_0}
 - pin_list:
-  - {pin_num: '137', peripheral: SIUL2, signal: 'gpio, 0', pin_signal: PTA0, direction: INPUT/OUTPUT}
+  - {pin_num: '100', peripheral: CAN0, signal: can0_tx, pin_signal: PTA7}
+  - {pin_num: '102', peripheral: CAN0, signal: can0_rx, pin_signal: PTA6}
+  - {pin_num: '86', peripheral: SIUL2, signal: 'gpio, 85', pin_signal: PTC21, direction: OUTPUT, InitValue: state_1}
+  - {pin_num: '85', peripheral: SIUL2, signal: 'gpio, 84', pin_signal: PTC20, direction: OUTPUT, InitValue: state_1}
+  - {pin_num: '87', peripheral: SIUL2, signal: 'gpio, 87', pin_signal: PTC23, direction: INPUT}
+  - {pin_num: '32', peripheral: SIUL2, signal: 'gpio, 29', pin_signal: PTA29, direction: OUTPUT, InitValue: state_1}
+  - {pin_num: '33', peripheral: SIUL2, signal: 'gpio, 30', pin_signal: PTA30, direction: OUTPUT, InitValue: state_1}
+  - {pin_num: '39', peripheral: SIUL2, signal: 'gpio, 31', pin_signal: PTA31, direction: OUTPUT, InitValue: state_1}
+  - {pin_num: '43', peripheral: SIUL2, signal: 'gpio, 51', pin_signal: PTB19, direction: INPUT}
+  - {pin_num: '143', peripheral: LPUART6, signal: lpuart6_tx, pin_signal: PTA16, direction: OUTPUT}
+  - {pin_num: '145', peripheral: LPUART6, signal: lpuart6_rx, pin_signal: PTA15}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 /* clang-format on */

@@ -68,11 +68,12 @@ extern "C"{
 #include "Platform_MemMap.h"
 /* List of configuration for interrupts #1 */
 static const IntCtrl_Ip_IrqConfigType aIrqConfiguration1[] = {
-    {FlexCAN0_1_IRQn, (boolean)TRUE, 0U, &CAN0_ORED_0_31_MB_IRQHandler},
+    {FlexCAN0_1_IRQn, (boolean)TRUE, 1U, &CAN0_ORED_0_31_MB_IRQHandler},
+    {LPUART6_IRQn, (boolean)TRUE, 2U, &LPUART_UART_IP_6_IRQHandler},
 };
 /* Configuration structure for interrupt controller #1*/
 const IntCtrl_Ip_CtrlConfigType IntCtrlConfig_0 = {
-    1U,
+    2U,
     aIrqConfiguration1
 };
 #define PLATFORM_STOP_SEC_CONFIG_DATA_UNSPECIFIED

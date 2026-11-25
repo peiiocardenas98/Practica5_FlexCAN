@@ -95,7 +95,7 @@ extern "C"{
 #define CAN_43_FLEXCAN_START_SEC_CODE
 #include "Can_43_FLEXCAN_MemMap.h"
 
-extern void FlexCAN_UserCallback(uint8 instance, Flexcan_Ip_EventType eventType,
+extern void flexcan_callback(uint8 instance, Flexcan_Ip_EventType eventType,
                 uint32 buffIdx, const Flexcan_Ip_StateType * flexcanState);
 #define CAN_43_FLEXCAN_STOP_SEC_CODE
 #include "Can_43_FLEXCAN_MemMap.h"
@@ -148,7 +148,7 @@ const Flexcan_Ip_ConfigType FlexCAN_Config0  = {
     },
 #endif /* (FLEXCAN_IP_FEATURE_HAS_TS_ENABLE == STD_ON) */
     /* Operation mode .flexcanMode */
-    FLEXCAN_LOOPBACK_MODE,
+    FLEXCAN_NORMAL_MODE,
 #if (FLEXCAN_IP_FEATURE_MEM_ERR_DET_ENABLED == STD_ON)
     /* FlexCAN Non-correctable Error Response .flexcanModeErrResponse */
     FLEXCAN_NORMAL_MODE,
@@ -172,15 +172,15 @@ const Flexcan_Ip_ConfigType FlexCAN_Config0  = {
         (boolean)FALSE,
         /*values for normal baudrate .bitrate*/
         {   /* Prop Seg */
-            (6U),
+            (5U),
             /* Phase Seg 1 */
             (5U),
             /* Phase Seg 2*/
-            (1U),
+            (2U),
             /* Pre Divider */
-            (5U),
+            (2U),
             /* Resync jump width */
-            (1U)
+            (2U)
         },
             /*values for FD baudrate .bitrate*/
         {   /* Prop Seg */
@@ -201,7 +201,7 @@ const Flexcan_Ip_ConfigType FlexCAN_Config0  = {
          0,
   #endif
     /* Controller Callback */
-    &FlexCAN_UserCallback,
+    &flexcan_callback,
     /* Error Callback */
     NULL_PTR
     };

@@ -76,6 +76,7 @@ extern const IntCtrl_Ip_CtrlConfigType IntCtrlConfig_0;
  * NOTE: For application specific handlers, these functions must be implemented in the application code!
  */
 extern void CAN0_ORED_0_31_MB_IRQHandler(void);
+extern void LPUART_UART_IP_6_IRQHandler(void);
 #define PLATFORM_STOP_SEC_CONFIG_DATA_UNSPECIFIED
 #include "Platform_MemMap.h"
 
