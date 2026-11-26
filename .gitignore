@@ -45,7 +45,7 @@ desktop.ini
 # Archivos ajenos al proyecto S32DS (herramientas de VS Code,
 # Claude Code y documentacion)
 # ---------------------------------------------------------------
-scripts/
+# scripts/
 docs/
 CLAUDE.md
 .claude/
